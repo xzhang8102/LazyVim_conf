@@ -1,8 +1,10 @@
 -- customization
 
 return {
-  "tpope/vim-surround",
-  "tpope/vim-repeat",
+  {
+    "kylechui/nvim-surround",
+    opts = {},
+  },
   { "folke/flash.nvim", enabled = false },
   {
     "hrsh7th/nvim-cmp",
@@ -18,5 +20,24 @@ return {
       end, { "i" })
       opts.experimental.ghost_text = false
     end,
+  },
+  {
+    "nvim-telescope/telescope.nvim",
+    opts = function(_, opts)
+      local actions = require("telescope.actions")
+      opts.defaults.mappings.i["<ESC>"] = actions.close
+    end,
+  },
+  {
+    "williamboman/mason.nvim",
+    opts = {
+      ui = {
+        icons = {
+          package_pending = " ",
+          package_installed = "󰄳 ",
+          package_uninstalled = " ",
+        }
+      }
+    }
   },
 }
