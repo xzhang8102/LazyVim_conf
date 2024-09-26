@@ -36,8 +36,28 @@ return {
           package_pending = " ",
           package_installed = "󰄳 ",
           package_uninstalled = " ",
-        }
-      }
-    }
+        },
+      },
+    },
+  },
+  {
+    "folke/noice.nvim",
+    opts = {
+      presets = {
+        lsp_doc_border = true,
+      },
+    },
+  },
+  {
+    "neovim/nvim-lspconfig",
+    opts = {
+      ---@type vim.diagnostic.Opts
+      diagnostics = {
+        float = {
+          border = "rounded",
+        },
+        virtual_text = false,
+      },
+    },
   },
 }
