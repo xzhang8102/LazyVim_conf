@@ -60,4 +60,16 @@ return {
       },
     },
   },
+  {
+    "nvim-neo-tree/neo-tree.nvim",
+    lazy = false,
+  },
+  {
+    "nvim-telescope/telescope.nvim",
+    keys = {
+      -- change the keymap to locate a opened buffer
+      { "<leader>fb", false },
+      { "<leader>bb", "<cmd>Telescope buffers sort_mru=true<cr>", desc = "Find Buffers" },
+    },
+  },
 }
