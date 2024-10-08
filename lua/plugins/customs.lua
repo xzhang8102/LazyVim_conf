@@ -70,6 +70,13 @@ return {
       -- change the keymap to locate a opened buffer
       { "<leader>fb", false },
       { "<leader>bb", "<cmd>Telescope buffers sort_mru=true<cr>", desc = "Find Buffers" },
+      {
+        "<leader>sM",
+        function()
+          require("telescope.builtin").man_pages({ sections = { "ALL" } })
+        end,
+        desc = "Man Pages",
+      },
     },
   },
 }
