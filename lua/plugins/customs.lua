@@ -73,4 +73,11 @@ return {
       { "<leader>sM", "<cmd>Telescope man_pages sections={'ALL'}<cr>", desc = "Man Pages" },
     },
   },
+  {
+    "stevearc/conform.nvim",
+    ---@param opts conform.setupOpts
+    opts = function(_, opts)
+      opts.formatters_by_ft["python"] = { "black" }
+    end,
+  },
 }
