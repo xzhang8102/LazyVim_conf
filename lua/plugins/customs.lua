@@ -3,6 +3,7 @@
 return {
   {
     "kylechui/nvim-surround",
+    vscode = true,
     opts = {},
   },
   { "folke/flash.nvim", enabled = false },
