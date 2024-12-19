@@ -3,9 +3,7 @@
 -- Add any additional keymaps here
 
 vim.keymap.set("i", "jj", "<ESC>")
-vim.keymap.del("n", "<leader>bb")
 
-vim.keymap.del("n", "<c-/>")
 vim.keymap.set("n", "<c-/>", function()
   Snacks.terminal(nil, { cwd = LazyVim.root(), win = { position = "float" } })
 end, { desc = "Terminal (Root Dir)" })

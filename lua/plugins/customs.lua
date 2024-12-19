@@ -23,13 +23,6 @@ return {
   --   end,
   -- },
   {
-    "nvim-telescope/telescope.nvim",
-    opts = function(_, opts)
-      local actions = require("telescope.actions")
-      opts.defaults.mappings.i["<ESC>"] = actions.close
-    end,
-  },
-  {
     "williamboman/mason.nvim",
     opts = {
       ui = {
@@ -69,15 +62,21 @@ return {
     "nvim-neo-tree/neo-tree.nvim",
     lazy = false,
   },
-  {
-    "nvim-telescope/telescope.nvim",
-    keys = {
-      -- change the keymap to locate a opened buffer
-      { "<leader>fb", false },
-      { "<leader>bb", "<cmd>Telescope buffers sort_mru=true<cr>", desc = "Find Buffers" },
-      { "<leader>sM", "<cmd>Telescope man_pages sections={'ALL'}<cr>", desc = "Man Pages" },
-    },
-  },
+  -- {
+  --   "nvim-telescope/telescope.nvim",
+  --   opts = function(_, opts)
+  --     local actions = require("telescope.actions")
+  --     opts.defaults.mappings.i["<ESC>"] = actions.close
+  --   end,
+  --   keys = {
+  --     -- change the keymap to locate a opened buffer
+  --     -- vim.keymap.del("n", "<leader>bb") -- remove the default mapping
+  --     { "<leader>fb", false },
+  --     { "<leader>bb", "<cmd>Telescope buffers sort_mru=true<cr>", desc = "Find Buffers" },
+  --     { "<leader>sM", "<cmd>Telescope man_pages sections={'ALL'}<cr>", desc = "Man Pages" },
+  --   },
+  --   end
+  -- },
   {
     "stevearc/conform.nvim",
     ---@param opts conform.setupOpts
