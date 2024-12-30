@@ -58,10 +58,6 @@ return {
       }
     end,
   },
-  {
-    "nvim-neo-tree/neo-tree.nvim",
-    lazy = false,
-  },
   -- {
   --   "nvim-telescope/telescope.nvim",
   --   opts = function(_, opts)
@@ -79,7 +75,6 @@ return {
   -- },
   {
     "stevearc/conform.nvim",
-    ---@param opts conform.setupOpts
     opts = function(_, opts)
       opts.formatters_by_ft["python"] = { "black" }
     end,
@@ -93,7 +88,18 @@ return {
       opts.keymap = {
         preset = "default",
         ["<ESC>"] = { "hide", "fallback" },
+        ["<CR>"] = { "accept", "fallback" },
       }
     end,
+  },
+  {
+    "ibhagwan/fzf-lua",
+    keys = {
+      {
+        "<leader>fp",
+        LazyVim.pick("files", { cwd = vim.fn.stdpath("data") .. "/lazy" }),
+        desc = "Find Files (plugins)",
+      },
+    },
   },
 }
