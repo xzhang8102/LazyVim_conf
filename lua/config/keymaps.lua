@@ -5,5 +5,5 @@
 vim.keymap.set("i", "jj", "<ESC>")
 
 vim.keymap.set("n", "<c-/>", function()
-  Snacks.terminal(nil, { cwd = LazyVim.root(), win = { position = "float" } })
+  Snacks.terminal(nil, { win = { position = "float" } })
 end, { desc = "Terminal (Root Dir)" })
