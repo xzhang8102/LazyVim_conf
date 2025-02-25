@@ -51,10 +51,6 @@ return {
         },
         virtual_text = false,
       }
-
-      opts.servers.gopls = {
-        mason = not vim.fn.executable("gopls"),
-      }
     end,
   },
   -- {
@@ -98,6 +94,18 @@ return {
         "<leader>fp",
         LazyVim.pick("files", { cwd = vim.fn.stdpath("data") .. "/lazy" }),
         desc = "Find Files (plugins)",
+      },
+    },
+  },
+  {
+    "folke/snacks.nvim",
+    opts = {
+      picker = {
+        sources = {
+          files = { hidden = true },
+          grep = { hidden = true },
+          explorer = { hidden = true },
+        },
       },
     },
   },
