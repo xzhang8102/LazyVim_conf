@@ -98,13 +98,25 @@ return {
     },
   },
   {
+    "folke/lazydev.nvim",
+    opts = function(_, opts)
+      table.insert(opts.library, { path = "snacks", words = { "Snacks" } })
+    end,
+  },
+  {
     "folke/snacks.nvim",
+    ---@type snacks.Config
     opts = {
       picker = {
         sources = {
           files = { hidden = true },
           grep = { hidden = true },
           explorer = { hidden = true },
+        },
+        layout = {
+          preset = function()
+            return vim.o.columns >= 120 and "default" or "dropdown"
+          end,
         },
       },
     },
