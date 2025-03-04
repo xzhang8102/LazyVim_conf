@@ -87,16 +87,16 @@ return {
       }
     end,
   },
-  {
-    "ibhagwan/fzf-lua",
-    keys = {
-      {
-        "<leader>fp",
-        LazyVim.pick("files", { cwd = vim.fn.stdpath("data") .. "/lazy" }),
-        desc = "Find Files (plugins)",
-      },
-    },
-  },
+  -- {
+  --   "ibhagwan/fzf-lua",
+  --   keys = {
+  --     {
+  --       "<leader>fp",
+  --       LazyVim.pick("files", { cwd = vim.fn.stdpath("data") .. "/lazy" }),
+  --       desc = "Find Files (plugins)",
+  --     },
+  --   },
+  -- },
   {
     "folke/lazydev.nvim",
     opts = function(_, opts)
@@ -118,6 +118,9 @@ return {
             return vim.o.columns >= 120 and "default" or "dropdown"
           end,
         },
+      },
+      dashboard = {
+        enabled = false,
       },
     },
   },
