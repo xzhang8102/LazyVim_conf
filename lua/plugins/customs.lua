@@ -2,8 +2,22 @@
 
 return {
   {
-    "kylechui/nvim-surround",
-    opts = {},
+    "echasnovski/mini.surround",
+    opts = function(_, opts)
+      -- Module mappings. Use `''` (empty string) to disable one.
+      opts.mappings = {
+        add = "ys", -- Add surrounding in Normal and Visual modes
+        delete = "ds", -- Delete surrounding
+        replace = "cs", -- Replace surrounding
+        find = "", -- Find surrounding (to the right)
+        find_left = "", -- Find surrounding (to the left)
+        highlight = "", -- Highlight surrounding
+        update_n_lines = "", -- Update `opts.n_lines`
+
+        suffix_last = "l", -- Suffix to search with "prev" method
+        suffix_next = "n", -- Suffix to search with "next" method
+      }
+    end,
   },
   { "folke/flash.nvim", enabled = false },
   -- {
