@@ -65,6 +65,12 @@ return {
         },
         virtual_text = false,
       }
+      opts.servers["clangd"] = {
+        filetypes = { "c", "cpp", "objc", "objcpp", "cuda", "hpp" },
+      }
+      opts.servers["protols"] = {
+        filetypes = { "proto" },
+      }
     end,
   },
   -- {
@@ -135,6 +141,14 @@ return {
       },
       dashboard = {
         enabled = false,
+      },
+      styles = {
+        terminal = {
+          relative = "editor",
+          keys = {
+            term_normal = false,
+          },
+        },
       },
     },
   },
