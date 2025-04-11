@@ -92,7 +92,23 @@ return {
     "stevearc/conform.nvim",
     opts = function(_, opts)
       opts.formatters_by_ft["python"] = { "black" }
+      opts.formatters.sqlfluff = {
+        args = { "format", "-" },
+      }
     end,
+  },
+  {
+    "mfussenegger/nvim-lint",
+    opts = {
+      linters = {
+        sqlfluff = {
+          args = {
+            "lint",
+            "--format=json",
+          },
+        },
+      },
+    },
   },
   {
     "saghen/blink.cmp",
