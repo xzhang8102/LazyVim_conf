@@ -3,6 +3,10 @@
 return {
   {
     "echasnovski/mini.surround",
+    keys = {
+      { "ys", mode = { "v", "x" }, false },
+      { "S", [[:<C-u>lua MiniSurround.add('visual')<CR>]], mode = { "x" }, silent = true },
+    },
     opts = function(_, opts)
       -- Module mappings. Use `''` (empty string) to disable one.
       opts.mappings = {
@@ -14,9 +18,10 @@ return {
         highlight = "", -- Highlight surrounding
         update_n_lines = "", -- Update `opts.n_lines`
 
-        suffix_last = "l", -- Suffix to search with "prev" method
-        suffix_next = "n", -- Suffix to search with "next" method
+        suffix_last = "", -- Suffix to search with "prev" method
+        suffix_next = "", -- Suffix to search with "next" method
       }
+      opts.search_method = "cover_or_next"
     end,
   },
   { "folke/flash.nvim", enabled = false },
