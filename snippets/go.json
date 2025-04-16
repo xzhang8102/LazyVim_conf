@@ -1,0 +1,14 @@
+{
+  "err": {
+    "prefix": [
+      "ie"
+    ],
+    "body": [
+      "if err != nil {",
+      "\t$1",
+      "}",
+      "$0"
+    ],
+    "description": "handle err"
+  }
+}
