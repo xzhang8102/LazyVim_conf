@@ -163,11 +163,21 @@ return {
       dashboard = {
         enabled = false,
       },
+      notifier = {
+        style = "fancy",
+      },
+      ---@type table<string, snacks.win.Config>
       styles = {
         terminal = {
           relative = "editor",
           keys = {
             term_normal = false,
+          },
+        },
+        notification = {
+          relative = "editor",
+          wo = {
+            winblend = 0,
           },
         },
       },
