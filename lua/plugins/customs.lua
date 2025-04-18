@@ -53,14 +53,6 @@ return {
     },
   },
   {
-    "folke/noice.nvim",
-    opts = {
-      presets = {
-        lsp_doc_border = true,
-      },
-    },
-  },
-  {
     "neovim/nvim-lspconfig",
     opts = function(_, opts)
       ---@type vim.diagnostic.Opts
@@ -163,9 +155,6 @@ return {
       dashboard = {
         enabled = false,
       },
-      notifier = {
-        style = "fancy",
-      },
       ---@type table<string, snacks.win.Config>
       styles = {
         terminal = {
@@ -180,6 +169,21 @@ return {
             winblend = 0,
           },
         },
+      },
+    },
+  },
+  {
+    "folke/noice.nvim",
+    opts = {
+      -- lsp progress is handled by vim.notify()
+      -- ref: autocmds.lua
+      lsp = {
+        progress = {
+          enabled = false,
+        },
+      },
+      presets = {
+        lsp_doc_border = true,
       },
     },
   },
