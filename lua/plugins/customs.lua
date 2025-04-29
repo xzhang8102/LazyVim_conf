@@ -196,6 +196,14 @@ return {
         lsp_doc_border = true,
         command_palette = false, -- tab completions for commandline don't pop-up at top
       },
+      routes = {
+        {
+          -- skip unknown message kind
+          -- see :help ui-messages
+          filter = { event = "msg_show", kind = "" },
+          opts = { skip = true },
+        },
+      },
     },
   },
 }
