@@ -190,11 +190,16 @@ return {
         },
       },
       cmdline = {
-        view = "cmdline", -- moves command line to bottom
+        -- view = "cmdline", -- moves command line to bottom
+        format = {
+          -- show command line input in whole when trying to run `:help` and `:lua`
+          lua = false,
+          help = false,
+        },
       },
       presets = {
         lsp_doc_border = true,
-        command_palette = false, -- tab completions for commandline don't pop-up at top
+        -- command_palette = false, -- tab completions for commandline don't pop-up at top
       },
       routes = {
         {
