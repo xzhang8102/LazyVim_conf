@@ -155,6 +155,13 @@ return {
       dashboard = {
         enabled = false,
       },
+      lazygit = {
+        config = {
+          gui = {
+            showRandomTip = false,
+          },
+        },
+      },
       ---@type table<string, snacks.win.Config>
       styles = {
         terminal = {
