@@ -62,12 +62,6 @@ return {
         },
         virtual_text = false,
       }
-      opts.servers["clangd"] = {
-        filetypes = { "c", "cpp", "objc", "objcpp", "cuda", "hpp" },
-      }
-      opts.servers["protols"] = {
-        filetypes = { "proto" },
-      }
     end,
   },
   -- {
