@@ -6,7 +6,3 @@
 vim.keymap.set("i", "jj", "<ESC>")
 -- escape from terminal mode to n mode
 vim.keymap.set("t", "<C-\\><C-\\>", "<C-\\><C-N>")
-
-vim.keymap.set("n", "<c-/>", function()
-  Snacks.terminal(nil, { win = { position = "float" } })
-end, { desc = "Terminal (Root Dir)" })

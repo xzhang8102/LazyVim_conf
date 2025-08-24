@@ -156,14 +156,17 @@ return {
           },
         },
       },
-      ---@type table<string, snacks.win.Config>
-      styles = {
-        terminal = {
-          relative = "editor",
-          keys = {
-            term_normal = false,
-          },
+      terminal = {
+        relative = "editor",
+        keys = {
+          term_normal = false,
         },
+        win = {
+          style = "terminal",
+          position = "float",
+        },
+      },
+      styles = {
         notification = {
           relative = "editor",
           wo = {
