@@ -2,7 +2,7 @@
 
 return {
   {
-    "echasnovski/mini.surround",
+    "nvim-mini/mini.surround",
     keys = {
       { "ys", mode = { "v", "x" }, false },
       { "S", [[:<C-u>lua MiniSurround.add('visual')<CR>]], mode = { "x" }, silent = true },
@@ -41,7 +41,7 @@ return {
   --   end,
   -- },
   {
-    "williamboman/mason.nvim",
+    "mason-org/mason.nvim",
     opts = {
       ui = {
         icons = {
@@ -112,6 +112,7 @@ return {
         ["<ESC>"] = { "hide", "fallback" },
         ["<CR>"] = { "accept", "fallback" },
       }
+      opts.cmdline.enabled = false
     end,
   },
   -- {
