@@ -45,3 +45,10 @@ vim.api.nvim_create_autocmd("LspProgress", {
     })
   end,
 })
+
+-- ref: https://neovim.io/doc/user/faq.html#_cursor-style-isn't-restored-after-exiting-or-suspending-and-resuming-nvim
+vim.api.nvim_create_autocmd({ "VimLeave", "VimSuspend" }, {
+  callback = function()
+    vim.opt.guicursor = "a:ver25-blinkwait300-blinkoff300-blinkon250"
+  end,
+})
