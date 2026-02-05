@@ -159,21 +159,18 @@ return {
           },
         },
       },
-      terminal = {
-        relative = "editor",
-        keys = {
-          term_normal = false,
-        },
-        win = {
-          style = "terminal",
-          position = "float",
-        },
-      },
       styles = {
         notification = {
           relative = "editor",
           wo = {
             winblend = 0,
+          },
+        },
+        terminal = {
+          relative = "editor",
+          position = "float",
+          keys = {
+            term_normal = false,
           },
         },
       },
