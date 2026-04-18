@@ -81,11 +81,16 @@ return {
   -- },
   {
     "stevearc/conform.nvim",
-    opts = function(_, opts)
-      opts.formatters.sqlfluff = {
-        args = { "format", "-" },
-      }
-    end,
+    opts = {
+      formatters = {
+        oxfmt = {
+          command = "oxfmt",
+        },
+        sqlfluff = {
+          args = { "format", "-" },
+        },
+      },
+    },
   },
   {
     "mfussenegger/nvim-lint",
@@ -96,6 +101,9 @@ return {
             "lint",
             "--format=json",
           },
+        },
+        oxlint = {
+          cmd = "oxlint",
         },
       },
     },
